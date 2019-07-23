@@ -1,0 +1,33 @@
+@import '../../styles/variables.scss';
+
+:host {
+  display: block;
+  box-sizing: border-box;
+}
+
+.tabs-list {
+  border-bottom: 1px solid #dddddd;
+  padding: 0 5px;
+}
+
+.tab-button {
+  border: 0;
+  font-size: 14px;
+  font-family: $font-family;
+  padding: 8px;
+  outline: none;
+  cursor: pointer;
+
+  &:hover:not(:disabled):not(.active) {
+    border-bottom: 3px solid $light-dark;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+  }
+
+  &.active {
+    border-bottom: 3px solid $blue-steel;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,73 @@
+@import '../../styles/variables.scss';
+
+:host {
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+:host([disabled]) {
+  pointer-events: none;
+}
+
+button {
+  font-family: $font-family;
+  cursor: pointer;
+  border: none;
+  background-color: $blue-steel;
+  color: $white;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 3px;
+  min-width: 80px;
+  outline: none;
+
+  &:hover {
+    background-color: $blue-steel-dark;
+  }
+  &:active {
+    background-color: darken($blue-steel-dark, 10%);
+  }
+  &:disabled {
+    opacity: 0.4;
+  }
+
+  // Color variations
+  &.accent {
+    background-color: $coral;
+
+    &:hover {
+      background-color: $coral-dark;
+    }
+    &:active {
+      background-color: darken($coral-dark, 10%);
+    }
+  }
+  &.light {
+    background-color: $light;
+    color: rgba(0, 0, 0, 0.7);
+
+    &:hover {
+      background-color: $light-dark;
+    }
+    &:active {
+      background-color: darken($light-dark, 10%);
+    }
+  }
+
+  // Shape variations
+  &.round {
+    border-radius: 50px;
+  }
+
+  // Size variations
+  &.small {
+    padding: 2px 8px;
+    font-size: 12px;
+  }
+  &.large {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+}
