@@ -9,9 +9,6 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface HelloWorld {
-    'name': string;
-  }
   interface MtnButton {
     'color': 'primary' | 'accent' | 'light';
     'disabled': boolean;
@@ -32,12 +29,6 @@ export namespace Components {
 declare global {
 
 
-  interface HTMLHelloWorldElement extends Components.HelloWorld, HTMLStencilElement {}
-  var HTMLHelloWorldElement: {
-    prototype: HTMLHelloWorldElement;
-    new (): HTMLHelloWorldElement;
-  };
-
   interface HTMLMtnButtonElement extends Components.MtnButton, HTMLStencilElement {}
   var HTMLMtnButtonElement: {
     prototype: HTMLMtnButtonElement;
@@ -56,7 +47,6 @@ declare global {
     new (): HTMLMtnTabsElement;
   };
   interface HTMLElementTagNameMap {
-    'hello-world': HTMLHelloWorldElement;
     'mtn-button': HTMLMtnButtonElement;
     'mtn-tab': HTMLMtnTabElement;
     'mtn-tabs': HTMLMtnTabsElement;
@@ -64,9 +54,6 @@ declare global {
 }
 
 declare namespace LocalJSX {
-  interface HelloWorld extends JSXBase.HTMLAttributes<HTMLHelloWorldElement> {
-    'name'?: string;
-  }
   interface MtnButton extends JSXBase.HTMLAttributes<HTMLMtnButtonElement> {
     'color'?: 'primary' | 'accent' | 'light';
     'disabled'?: boolean;
@@ -84,7 +71,6 @@ declare namespace LocalJSX {
   }
 
   interface IntrinsicElements {
-    'hello-world': HelloWorld;
     'mtn-button': MtnButton;
     'mtn-tab': MtnTab;
     'mtn-tabs': MtnTabs;
