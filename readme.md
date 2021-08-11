@@ -2,7 +2,7 @@
 
 # Mountain UI
 
-This is the demonstration repository for [Component Libraries with Stencil.js](https://dev.to/johnbwoodruff/component-libraries-with-stenciljs---about-stencil-10b7) blog post series.
+This is the demonstration repository for [Component Libraries with Stencil.js](https://johnbwoodruff.com/posts/about-stencil/) blog post series.
 
 ## Getting Started
 
